@@ -29,7 +29,7 @@ ComfyJS.onChat = ( user, message, flags, self, extra ) => {
     console.log(cleanedMsg);
     
 
-    if(cleanedMsg === "alo" && appIsOn){
+    if((cleanedMsg === "alo" || cleanedMsg === "aloo") && appIsOn){
         let normalizedVolume = !isNaN(VOLUME) ? Math.max(0.01, Math.min(1, VOLUME / 100)) : 1;
         HELLOSOUND.volume = normalizedVolume; 
         HELLOSOUND.currentTime = 0;
